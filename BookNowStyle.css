@@ -1,0 +1,320 @@
+body{
+	background: url("pictures/homebackground.jpg");
+	background-size: cover;
+}
+
+option{
+  padding: 20px;
+}
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	font-family: 'Montserrat', sans-serif;
+	background-position: center;
+}
+
+#booking::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.booking-form {
+	max-width: 642px;
+	width: 100%;
+	margin: auto;
+}
+
+.booking-form .form-header {
+  font-family: monospace;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.booking-form .form-header h1 {
+	font-size: 58px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: darkslateblue;
+  border-color: whitesmoke;
+	margin: 0px;
+}
+
+.booking-form>form {
+	background-color: #101113;
+	padding: 30px 20px;
+	border-radius: 6px;
+}
+
+.select-box{
+  	display: flex;
+  	width: 600px;
+  	flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.selection{
+    height: 49px;
+    border: 3px solid black;
+    font-family: monospace;
+    transition: all 0.4s;
+    border-radius: 8px;
+}
+
+.selection:disabled{
+  background-color: #E8E8E8;
+  cursor: not-allowed;
+}
+
+.ops-container {
+  background: white;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  border: 3px solid black;
+  background: white;
+  border-radius: 8px;
+  color: black;
+  position: relative;
+  order: 0;
+  text-align: left;
+}
+
+.type-options-container{
+  width: 45%;
+  transition: 0.4s;
+  margin-bottom: 15px;
+}
+
+.type-selected{
+  width: 45%;
+  margin-left: 50%;
+  margin-bottom: 1px;
+}
+
+.date{
+  width: 250px;
+  position: absolute;
+}
+
+.selected[disabled="disabled"]{
+	pointer-events: none;
+	background-color: lightgray;
+}
+
+.selected::after{
+  content: "";
+  background: url("pictures/down-arrow.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 18px;
+  transition: all 0.4s;
+}
+
+.ops-container.active{
+  width: 590px;
+  max-height: 120px;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 2px;
+}
+
+.type-select-box .type-options-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    width: 296px;
+    margin-left: 298px;
+}
+
+.course-options-container.active + .course-selected::after{
+  transform: rotateX(180deg);
+  top: -18px;
+}
+
+.level-options-container.active + .level-selected::after{
+  transform: rotateX(180deg);
+  top: -18px;
+}
+
+.tutor-options-container.active + .tutor-selected::after{
+  transform: rotateX(180deg);
+  top: -18px;
+}
+
+.type-options-container.active + .type-selected::after{
+  transform: rotateX(180deg);
+  top: -18px;
+}
+
+.ops-container::-webkit-scrollbar{
+  width: 8px;
+  background: lightgrey;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.ops-container::-webkit-scrollbar-thumb{
+  background: gray;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.option, .selected{
+  padding: 13px 12px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: lightgrey;
+}
+
+.select-box label{
+  cursor: pointer;
+}
+
+.option .radio {
+  display: none;
+}
+
+/* Searchbox */
+
+.search-box input{
+  width: 560px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  height: 0;
+}
+
+.search-box input:focus{
+  outline: none;
+  padding: 10px 16px;
+  height: 20px;
+}
+
+.level-select-box .level-options-container.active ~ .level-search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.course-select-box .course-options-container.active ~ .course-search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tutor-select-box .tutor-options-container.active ~ .tutor-search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.type-select-box .type-options-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 8px;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #3e485c;
+  font-size: 16px;
+  position: relative;
+  padding: 12px;
+  height: 20px;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.booking-form .form-control::placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.btn {
+    background-color: #1d1d8c;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    height: 50px;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 5px;
+    background-image: none;
+    border-style: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.message{
+    position: absolute;
+    bottom: 100%;
+    left: 31%;
+    width:500px;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px 20px 10px;
+    border: none;
+    background: #62C584;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 8px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="pictures/logo.png" />
+<title>Student Profile</title>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+ background-color: #cccccc;
+ background-size: cover;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(pictures/homebackground.jpg);
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width : 58%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top: 6%;
+  border-radius: 10px;
+  padding-bottom: 8%;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=text], select {
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+  <h1 style="padding-top: 5%;">Add Student Form</h1>
+  <br><br>
+    
+      <div>
+          <form action="addstudent">
+            <label for="id" style="float: left;">ID</label>
+            <input type="text" id="firstname" name="id" placeholder="student ID..">
+            
+            <label for="pw" style="float: left;">Password</label>
+            <input type="text" id="password" name="pw" placeholder="student password..">
+            
+            <label for="firstname" style="float: left;">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="student first name..">
+
+            <label for="lastname" style="float: left;">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="student last name..">
+
+            <label for="academiclevel" style="float: left;">Academic Level</label>
+            <select id="academiclevel" name="academiclevel">
+              <option value="australia">TC</option>
+              <option value="canada">1BAC</option>
+              <option value="usa">2BAC</option>
+            </select>
+
+            <label for="birthdate" style="float: left;">Date of Birth</label>
+            <!--<br><br><br><input type="date" id="dob" name="dob" value="Year-Month-Day" min="1990-01-01" max="2015-01-01" style="float: left;">-->
+            <br><br><br><input type="date" name="bod" placeholder="  dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31" style="float: left; font-size: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 4px;">
+
+            <br><br><br><label for="phonenumber" style="float: left;">Phone number</label>
+            <input type="text" id="phonenumber" name="phonenumber" placeholder="phone number">
+          
+            <input type="submit" value="Submit" style="font-size: 15px;">
+          </form>
+      </div>
+
+
+</div>
+
+</body>
+</html>

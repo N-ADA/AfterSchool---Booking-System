@@ -1,0 +1,146 @@
+body{
+	background: url("pictures/homebackground.jpg");
+	background-size: cover;
+}
+
+.center_name{
+  font-size: 40px;
+  color: white;
+  font-family: cursive;
+}
+
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: relative;
+	top: 45%;
+	margin-left: 50%;
+	right: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#addingAv {
+	font-family: 'Montserrat', sans-serif;
+	background-position: center;
+}
+
+#addingAv::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.adding-form {
+	max-width: 600px;
+	width: 100%;
+	margin: auto;
+}
+
+.adding-form .form-header {
+  font-family: monospace;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.adding-form .form-header h1 {
+	font-size: 58px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*text-shadow: 10px 10px 30px black;*/
+  color: white;
+  border-color: whitesmoke;
+	margin: 0px;
+}
+
+.adding-form>form {
+	background-color: #101113;
+	padding: 30px 20px;
+	border-radius: 6px;
+}
+
+.adding-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.adding-form .form-control {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 8px;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #3e485c;
+  font-size: 16px;
+  position: relative;
+  padding: 25px;
+  height: 20px;
+
+}
+
+.adding-form .form-control::-webkit-input-placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.adding-form .form-control:-ms-input-placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.adding-form .form-control::placeholder {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.adding-form input[type="date"].form-control:invalid {
+  color: rgba(62, 72, 92, 0.3);
+}
+
+.btn {
+    background-color: #1d1d8c;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    height: 50px;
+  	border: none;
+  	width: 100%;
+  	border-radius: 3px;
+  	margin-top: 5px;
+}
+
+.btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute;
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+}
+
+
